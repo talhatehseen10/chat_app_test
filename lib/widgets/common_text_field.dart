@@ -97,10 +97,10 @@ class CustomTextField extends StatelessWidget {
       labelText: lableText,
       labelStyle: context.bodySmall,
       // enabledBorder: context.enabledBorder,
-      disabledBorder: context.enabledBorder,
+      //disabledBorder: context.enabledBorder,
       // focusedBorder: context.focusedBorder,
-      focusedErrorBorder: context.errorBorder,
-      errorBorder: context.errorBorder,
+      //focusedErrorBorder: context.errorBorder,
+      //errorBorder: context.errorBorder,
       enabledBorder: OutlineInputBorder(
         borderSide: BorderSide(color: borderColor),
         borderRadius: BorderRadius.circular(Sizes.RADIUS_6),

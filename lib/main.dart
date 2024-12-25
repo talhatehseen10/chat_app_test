@@ -1,12 +1,27 @@
 import 'package:chat_test_app/routes/app_pages.dart';
 import 'package:chat_test_app/routes/app_routes.dart';
+import 'package:chat_test_app/themes/controller/theme_controller.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 
 import 'constants/constants.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  await initialization();
+  runApp(
+    const MyApp(),
+  );
+}
+
+Future initialization() async {
+  await GetStorage.init(AppStrings.THEME_BOX_KEY);
+  await GetStorage.init().then((value) async {
+    Get.lazyPut(() => ThemeController(), fenix: true);
+  });
 }
 
 class MyApp extends StatelessWidget {
