@@ -2,7 +2,6 @@ import 'package:chat_test_app/views/authentication/models/signup/country.dart';
 import 'package:chat_test_app/views/authentication/models/signup/region.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -38,17 +37,21 @@ class SignupController extends GetxController {
   }
 
   Future<void> userSignUp() async {
+    isLoading.value = true;
     await FirebaseAuth.instance
         .createUserWithEmailAndPassword(
             email: email.text, password: password.text)
-        .then((val) {
-      FirebaseFirestore.instance
+        .then((val) async {
+      await FirebaseFirestore.instance
           .collection("users")
           .doc(val.user!.uid)
           .set({"email": email.text, "typing": false, "recording": false}).then(
-              (val) {
+              (e) {
         Get.snackbar("Successfully", "User successfully registered");
       });
+    }, onError: (e) {
+      Get.snackbar("Error", e.toString());
     });
+    isLoading.value = false;
   }
 }

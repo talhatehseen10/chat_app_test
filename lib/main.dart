@@ -24,7 +24,7 @@ Future initialization() async {
   });
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends GetView<ThemeController> {
   const MyApp({super.key});
 
   // This widget is the root of your application.
@@ -34,6 +34,7 @@ class MyApp extends StatelessWidget {
       navigatorKey: Get.key,
       debugShowCheckedModeBanner: false,
       title: AppStrings.APP_NAME,
+      theme: controller.getTheme,
       themeMode: ThemeMode.light,
       initialRoute: AppRoutes.LOGIN,
       getPages: AppPages.pages,

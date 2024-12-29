@@ -1,0 +1,33 @@
+{
+  "modules": [
+    {
+      "id": "1",
+      "name": "Basic Speech Course",
+      "cakes": [
+        {
+          "id": "1-1",
+          "type": "text",
+          "content": "Describe yourself in three sentences."
+        },
+        {
+          "id": "1-2",
+          "type": "image",
+          "content": "https://example.com/image1.png",
+          "description": "What do you see in this picture?"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Advanced Sentence Formation",
+      "cakes": [
+        {
+          "id": "2-1",
+          "type": "audio",
+          "content": "https://example.com/audio1.mp3",
+          "description": "Repeat the sentence you hear."
+        }
+      ]
+    }
+  ]
+}

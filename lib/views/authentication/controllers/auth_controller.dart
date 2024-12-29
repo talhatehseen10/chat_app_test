@@ -1,12 +1,14 @@
 import 'package:chat_test_app/preferences/preferences.dart';
+import 'package:chat_test_app/routes/app_routes.dart';
 import 'package:chat_test_app/views/authentication/models/user.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class AuthController extends GetxController {
   RxBool isLoading = false.obs;
   String? showSwitchTile;
-  User? user;
   late GlobalKey<FormState> formKey;
   RxBool isObscureText = true.obs;
   late TextEditingController emailController;
@@ -18,8 +20,8 @@ class AuthController extends GetxController {
   @override
   void onInit() {
     formKey = GlobalKey<FormState>();
-    emailController = TextEditingController();
-    passwordController = TextEditingController();
+    emailController = TextEditingController(text: "talha@gmail.com");
+    passwordController = TextEditingController(text: "1234567");
     emailForgotController = TextEditingController();
     // emailController = TextEditingController();
     // passwordController = TextEditingController();
@@ -34,16 +36,27 @@ class AuthController extends GetxController {
     super.dispose();
   }
 
+  void userLogin() async {
+    await FirebaseAuth.instance
+        .signInWithEmailAndPassword(
+            email: emailController.text.trim(),
+            password: passwordController.text.trim())
+        .then((e) {
+      Get.offAndToNamed(AppRoutes.HOME);
+    }, onError: (e) {
+      Get.snackbar("Invalid", e.toString());
+    });
+  }
+
   void addUserLoginData(Map<String, dynamic> data) async {
     isServerError.value = false;
-    user = User.fromJson(data);
-    Preferences().setIsLogin(true);
-    Preferences().setUser(user!.toJson());
-    Preferences().setUserToken(user!.accessToken!);
+    // Preferences().setIsLogin(true);
+    // Preferences().setUser(user!.toJson());
+    // Preferences().setUserToken(user!.accessToken!);
     isLoading.value = false;
   }
 
   void addUserLoginDataIfLogin() {
-    user = User.fromJson(Preferences().getUser());
+    //user = User.fromJson(Preferences().getUser());
   }
 }

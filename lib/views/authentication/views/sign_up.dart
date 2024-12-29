@@ -1,4 +1,6 @@
 import 'package:chat_test_app/constants/constants.dart';
+import 'package:chat_test_app/extensions/context_extension.dart';
+import 'package:chat_test_app/themes/themes.dart';
 import 'package:chat_test_app/views/authentication/controllers/signup_controller.dart';
 import 'package:chat_test_app/widgets/common_text_field.dart';
 import 'package:chat_test_app/widgets/custom_app_bar.dart';
@@ -15,7 +17,7 @@ class SignUp extends GetView<SignupController> {
     return SafeArea(
       child: Scaffold(
         backgroundColor: const Color(0xffF5F5F5),
-        appBar: customAppBar(context),
+        appBar: customAppBar(context, title: AppStrings.SIGN_UP),
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.symmetric(
@@ -39,7 +41,7 @@ class SignUp extends GetView<SignupController> {
                             return null;
                           },
                           fillColor: Colors.white,
-                          hintText: AppStrings.NAME,
+                          hintText: AppStrings.EMAIL,
                           suffixIcon: Icon(
                             Icons.email_outlined,
                             color: context.iconColor,
@@ -89,15 +91,24 @@ class SignUp extends GetView<SignupController> {
                   const SizedBox(
                     height: Sizes.HEIGHT_10,
                   ),
-                  CustomElevatedButton(
-                    height: Sizes.HEIGHT_54,
-                    width: double.infinity,
-                    text: "SIGN UP",
-                    onPressed: () {
-                      if (controller.signupFormKey.currentState!.validate()) {
-                        controller.userSignUp();
-                      }
-                    },
+                  Obx(
+                    () => controller.isLoading.value
+                        ? Center(
+                            child: CircularProgressIndicator(
+                              color: LightTheme.progressIndicatorColor,
+                            ),
+                          )
+                        : CustomElevatedButton(
+                            height: Sizes.HEIGHT_54,
+                            width: double.infinity,
+                            text: "SIGN UP",
+                            onPressed: () {
+                              if (controller.signupFormKey.currentState!
+                                  .validate()) {
+                                controller.userSignUp();
+                              }
+                            },
+                          ),
                   ),
                 ],
               ),

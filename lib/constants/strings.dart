@@ -130,14 +130,10 @@ class AppStrings {
   static const String ADMIN = "Admin";
 
   //APP BAR TITLE
-  static const String PRODUCT_FINDER = "PRODUCT FINDER";
-  static const String NOTIFICATIONS = "NOTIFICATIONS";
-  static const String BROADCAST = "BROADCAST";
-  static const String UPLOAD_AND_SHARE = "UPLOAD & SHARE";
-  static const String ASSESSMENT = "ASSESSMENT";
-  static const String BSWTD = "BSWTD";
-  static const String BSWTF = "BSWTF";
-  static const String QUESTIONNAIRE = "QUESTIONNAIRE";
+  static const String HOME = "Home";
+
+  static const String CAKE_DETAILS = "Cake Details";
+  static const String MODULE = "Module";
 
   //MENU
   static const String LANGUAGE = "LANGUAGE";
@@ -368,45 +364,4 @@ class AppStrings {
 
   static const String DINPRO_MEDIUM = 'DINProMedium';
   static const String DINPRO_MEDIUM_ITALIC = 'DINProMediumItalic';
-
-  // Table Headers
-  static const String ORDER_DATE = 'Order Date';
-  static const String COMPANY_NAME = 'Company Name';
-  static const String WORK_PHONE = 'Work Phone';
-  static const String MOBILE_PHONE = 'Mobile Phone';
-  static const String CONTACT_PREFERENCES = 'Contact Preferences';
-  static const String ADDRESS = 'Address';
-  static const String ADDRESS1 = 'Address1';
-  static const String ADDRESS2 = 'Address 2';
-  static const String CITY = 'City';
-  static const String STATE = 'State';
-  static const String ZIP_CODE = 'Zip Code';
-  static const String SALES_REP_NAME = 'Sales Rep Name';
-  static const String COMPANY_PRACTICE = 'Company Practice';
-  static const String TITLE = 'Title';
-  static const String TITLE_2 = 'TITLE';
-  static const String CUSTOMER_NO = 'Customer No';
-  static const String CONTACT_NO = 'Contact No';
-  static const String PRODUCT_NAME = 'Product Name';
-  static const String PROJECT_DESC = 'Project Desc';
-  static const String PROJECT_TYPE = 'Project Type';
-  static const String PROJECT_PHASE = 'Project Phase';
-
-  static const String ON_HAND = 'ON Hand';
-  static const String ON_SO = 'ON SO';
-  static const String ON_PO = 'ON PO';
-  static const String IN_TRANSIT = 'In Transit';
-  static const String ETA_DATE = 'ETA Date';
-
-  //FIELDS NAME
-  static const String BILL_TO = 'Bill To';
-  static const String PROJECT_NAME = 'Project Name';
-  static const String TERMS = 'Terms';
-  static const String SHIP_TO = 'Ship To';
-  static const String PRIORITY = 'Priority';
-  static const String SPECIFIER = 'Specifier';
-  static const String SALESPERSON = 'Salesperson';
-  static const String CUSTOMER_PO = 'Customer PO';
-  static const String CAMPAIGN = 'Campaign';
-  static const String REQ_SHIP_DATE = 'Req Ship Date';
 }

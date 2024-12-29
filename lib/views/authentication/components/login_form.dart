@@ -95,7 +95,9 @@ class LoginForm extends GetView<AuthController> {
                           onPressed: () async {
                             //controller.tempLogin();
 
-                            if (controller.formKey.currentState!.validate()) {}
+                            if (controller.formKey.currentState!.validate()) {
+                              controller.userLogin();
+                            }
                           },
                           text: AppStrings.LOG_IN,
                         ),

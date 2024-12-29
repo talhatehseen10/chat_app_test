@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 PreferredSizeWidget customAppBar(BuildContext context,
     {String? title, Widget? leadingWidget}) {
   return AppBar(
-    backgroundColor: Colors.transparent,
+    backgroundColor: Colors.grey.shade200,
     elevation: 0,
     leading: leadingWidget ??
         GestureDetector(
