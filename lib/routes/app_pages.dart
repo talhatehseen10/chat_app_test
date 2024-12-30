@@ -9,6 +9,12 @@ import 'package:chat_test_app/views/task_2/bindings/task_2_binding.dart';
 import 'package:chat_test_app/views/task_2/views/cake_details_screen.dart';
 import 'package:chat_test_app/views/task_2/views/cake_list_screen.dart';
 import 'package:chat_test_app/views/task_2/views/module_list_screen.dart';
+import 'package:chat_test_app/views/task_3/bindings/speech_to_text_binding.dart';
+import 'package:chat_test_app/views/task_3/bindings/task_3_binding.dart';
+import 'package:chat_test_app/views/task_3/bindings/text_to_speech_binding.dart';
+import 'package:chat_test_app/views/task_3/views/speech_to_text_screen.dart';
+import 'package:chat_test_app/views/task_3/views/text_to_speech_screen.dart';
+import 'package:chat_test_app/views/task_3/views/voice_assistant_screen.dart';
 import 'package:chat_test_app/views/voice_room/bindings/voice_room_binding.dart';
 import 'package:chat_test_app/views/voice_room/views/voice_room_screen.dart';
 import 'package:get/get.dart';
@@ -52,5 +58,18 @@ class AppPages {
       name: AppRoutes.CAKE_DETAILS_SCREEN,
       page: () => const CakeDetailScreen(),
     ),
+    GetPage(
+      name: AppRoutes.VOICE_ASSISTANT_SCREEN,
+      page: () => const VoiceAssistantScreen(),
+      binding: Task3Binding(),
+    ),
+    GetPage(
+        name: AppRoutes.TEXT_TO_SPEECH_SCREEN,
+        page: () => const TextToSpeechScreen(),
+        binding: TextToSpeechBinding()),
+    GetPage(
+        name: AppRoutes.SPEECH_TO_TEXT_SCREEN,
+        page: () => const SpeechToTextScreen(),
+        binding: SpeechToTextBinding()),
   ];
 }

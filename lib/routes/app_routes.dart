@@ -5,6 +5,9 @@ import 'package:chat_test_app/views/home/views/home.dart';
 import 'package:chat_test_app/views/task_2/views/cake_details_screen.dart';
 import 'package:chat_test_app/views/task_2/views/cake_list_screen.dart';
 import 'package:chat_test_app/views/task_2/views/module_list_screen.dart';
+import 'package:chat_test_app/views/task_3/views/speech_to_text_screen.dart';
+import 'package:chat_test_app/views/task_3/views/text_to_speech_screen.dart';
+import 'package:chat_test_app/views/task_3/views/voice_assistant_screen.dart';
 import 'package:chat_test_app/views/voice_room/views/voice_room_screen.dart';
 
 class AppRoutes {
@@ -24,4 +27,9 @@ class AppRoutes {
   static const String MODULE_LIST_SCREEN = ModuleListScreen.routeName;
   static const String CAKE_LIST_SCREEN = CakeListScreen.routeName;
   static const String CAKE_DETAILS_SCREEN = CakeDetailScreen.routeName;
+
+  //TASK_3_SCREEN
+  static const String SPEECH_TO_TEXT_SCREEN = SpeechToTextScreen.routeName;
+  static const String TEXT_TO_SPEECH_SCREEN = TextToSpeechScreen.routeName;
+  static const String VOICE_ASSISTANT_SCREEN = VoiceAssistantScreen.routeName;
 }

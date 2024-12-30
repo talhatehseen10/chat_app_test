@@ -1,7 +1,4 @@
-import 'package:chat_test_app/preferences/preferences.dart';
 import 'package:chat_test_app/routes/app_routes.dart';
-import 'package:chat_test_app/views/authentication/models/user.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

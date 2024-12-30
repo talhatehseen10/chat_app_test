@@ -1,5 +1,4 @@
 import 'package:chat_test_app/constants/constants.dart';
-import 'package:chat_test_app/extensions/context_extension.dart';
 import 'package:chat_test_app/themes/themes.dart';
 import 'package:chat_test_app/views/authentication/controllers/signup_controller.dart';
 import 'package:chat_test_app/widgets/common_text_field.dart';

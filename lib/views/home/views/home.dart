@@ -39,6 +39,9 @@ class Home extends GetView<HomeController> {
               ),
             ),
             ListTile(
+              onTap: () {
+                Get.toNamed(AppRoutes.VOICE_ASSISTANT_SCREEN);
+              },
               title: Text("Voice Room"),
               trailing: Icon(
                 Icons.arrow_forward_ios,
