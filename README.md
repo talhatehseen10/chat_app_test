@@ -1,16 +1,27 @@
-# chat_test_app
+Description
+This is a test application for a chat app developed using Flutter. The app is built with a focus on modularity and scalability, leveraging the GetX state management library and the MVC (Model-View-Controller) architecture.
 
-A new Flutter project.
+Features
+- Speech-to-Text (STT):
+- Convert recorded voice to text and display the transcribed text.
 
-## Getting Started
+Text-to-Speech (TTS):
+- Convert entered text into speech and play it through the device’s speakers.
 
-This project is a starting point for a Flutter application.
+Voice Room:
+- Join and interact in a voice room with multiple participants.
 
-A few resources to get you started if this is your first Flutter project:
+Error Handling:
+- Robust error handling and user feedback for common issues like permission denials and network errors.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Architecture
+This project follows the MVC architecture for better separation of concerns:
+- Model: Manages data and business logic.
+- View: Handles the UI elements and interactions.
+- Controller: Serves as the intermediary between the Model and View, containing logic for UI updates.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+State Management
+The project uses GetX for:
+- Reactive state management.
+- Dependency injection.
+- Navigation.
