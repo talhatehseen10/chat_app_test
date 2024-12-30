@@ -25,3 +25,14 @@ The project uses GetX for:
 - Reactive state management.
 - Dependency injection.
 - Navigation.
+
+
+My Approach
+- Modular Architecture: Implemented the Model-View-Controller (MVC) pattern using GetX for state management to ensure a clean and maintainable codebase.
+- UI Design: Designed a user-friendly interface that adheres to Flutter's responsive design principles.
+- Efficiency: Optimized performance by leveraging Flutter widgets effectively and following best practices for state management.
+- Scalability: Ensured that the codebase can be easily extended for future features.
+Assumptions Made
+1 The app will be run on a device with internet access for specific API-based features (if applicable).
+2 The user will have all necessary permissions (e.g., microphone, storage) granted for seamless app functionality.
+4 No backend implementation is required unless explicitly mentioned in the assignment document.
